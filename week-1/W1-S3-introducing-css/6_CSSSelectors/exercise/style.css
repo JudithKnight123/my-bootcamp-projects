@@ -1,0 +1,60 @@
+/* TODO: what type of selector is this? */
+/* universal */
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* TODO: what type of selector is this? */
+/* element */
+h1 {
+    color: blue;
+}
+
+p {
+    margin: 10px 0;
+}
+/* unordered list (ul) and list item (li) selectors */
+ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+/* list item */
+li {
+    margin: 5px 0;
+}
+/*link*/
+a {
+    color: green;
+}
+
+/* TODO: what type of selector is this? */
+
+/* class */
+
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+.new {
+    color: red;
+}
+
+.something     {
+    color: purple;
+}
+
+.special {
+    color: purple;
+}
+
+/* TODO: what type of selector is this? */
+
+/* id */
+
+#uniqueDiv {
+    color: red;
+    font-size: 20px;
+}

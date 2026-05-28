@@ -1,0 +1,24 @@
+section {
+    width: 600px;
+    height: 600px;
+    text-align: center;
+    border: 15px solid black;
+}
+img {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    /* Margin property */
+    margin: 20px;
+    /* Padding property */
+    padding: 20px;
+    /* Border property */
+    border: 9px solid darkblue;
+}
+
+
+    /* Just showing off */
+img:hover {
+    transition: all 0.5s ease;
+    scale: 1.2;
+}
