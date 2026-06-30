@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery UI Widgets Demo</title>
+
+    <!-- jQuery and jQuery UI CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .draggable-box {
+            width: 150px;
+            height: 150px;
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: move;
+        }
+
+        .datepicker {
+            margin-bottom: 20px;
+        }
+
+        .autocomplete {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>jQuery UI Widgets Demo</h2>
+
+
+     
+<ul id="menu">
+  <li>
+    <div>Item 1</div>
+  </li>
+  <li>
+    <div>Item 2</div>
+  </li>
+  <li>
+    <div>Item 3</div>
+    <ul>
+      <li>
+        <div>Item 3-1</div>
+      </li>
+      <li>
+        <div>Item 3-2</div>
+      </li>
+      <li>
+        <div>Item 3-3</div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <div>Item 4</div>
+  </li>
+  <li>
+    <div>Item 5</div>
+  </li>
+</ul>
+ 
+<script>
+$( "#menu" ).menu();
+</script>
+
+    <!-- Drag and Drop Box -->
+    <div class="draggable-box">
+        Drag Me
+    </div>
+
+    <!-- Date Picker Input -->
+    <p>Select a date: <input type="text" id="datepicker" class="datepicker"></p>
+
+    <!-- Autocomplete Input -->
+    <p>Start typing a fruit: <input type="text" id="autocomplete" class="autocomplete"></p>
+
+<h3>Accordion Widget</h3>
+<div id="accordion">
+  <h3>Section 1</h3>
+  <div>
+    <p>Content for section 1.</p>
+  </div>
+  <h3>Section 2</h3>
+  <div>
+    <p>Content for section 2.</p>
+  </div>
+</div>
+
+<div id="tabs">
+  <ul>
+    <li><a href="#fragment-1"><span>One</span></a></li>
+    <li><a href="#fragment-2"><span>Two</span></a></li>
+    <li><a href="#fragment-3"><span>Three</span></a></li>
+  </ul>
+  <div id="fragment-1">
+    <p>First tab is active by default:</p>
+    <pre><code>$( "#tabs" ).tabs(); </code></pre>
+  </div>
+  <div id="fragment-2">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  </div>
+  <div id="fragment-3">
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+  </div>
+</div>
+
+<div id="slider"></div>
+
+
+
+    <script>
+
+
+        $(document).ready(function () {
+
+        $( "#tabs" ).tabs();
+
+
+            $( "#slider" ).slider({
+                value: 50,
+                min: 0,
+                max: 100,
+                step: 1,
+                slide: function( event, ui ) {
+                    console.log("Slider value: " + ui.value);
+                }
+            });
+
+
+            // Initialize Accordion
+            $("#accordion").accordion();
+
+            // Draggable widget
+            $(".draggable-box").draggable();
+
+            // Datepicker widget
+            $("#datepicker").datepicker();
+
+            // Autocomplete widget
+            var availableFruits = [
+                "Apple", "Banana", "Cherry", "Date", "Grape", "Lemon", "Mango", "Orange",
+                "Peach", "Pineapple", "Strawberry", "Watermelon"
+            ];
+            $("#autocomplete").autocomplete({
+                source: availableFruits
+            });
+        });
+    </script>
+
+</body>
+
+</html>

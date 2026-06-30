@@ -1,0 +1,36 @@
+/* Custom Styles for overriding Bootstrap colors */
+.btn-primary {
+    background-color: #ff5733; /* Custom primary color */
+    border-color: #ff5733; /* Match border to background */
+}
+
+.btn-secondary {
+    background-color: #33c1ff; /* Custom secondary color */
+    border-color: #33c1ff; /* Match border to background */
+}
+.text-dark {
+    color: #4a0083 !important; /* Custom dark text color */
+}
+
+.bg-secondary {
+    background-color: #ff00cc !important; /* Custom secondary background color */
+}
+
+:root{
+    --btn-primary-new: #ff00ff;
+    --btn-secondary-new: #33c1ff;
+    --text-dark-new: #4a0083;
+    --bg-secondary-new: #1900ff;
+}
+.btn-primary {
+    background-color: var(--btn-primary-new ); /* Custom primary color */
+}
+.btn-secondary {
+    background-color: var(--btn-secondary-new ); /* Custom secondary color */
+}
+.text-dark {
+    color: var(--text-dark-new ) !important; /* Custom dark text color */
+}
+.bg-secondary {
+    background-color: var(--bg-secondary-new ) !important; /* Custom secondary background color */
+}
